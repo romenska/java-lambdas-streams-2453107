@@ -29,4 +29,7 @@ public class PlanetUtils {
             .collect(Collectors.toList());
   }
 
+  public List<String> getPlanetsNameUpperCase(List<Planet> planets) {
+    return planets.stream().map(item->item.getName().toUpperCase()).collect(Collectors.toList());
+  }
 }

@@ -42,4 +42,11 @@ class PlanetTest {
             .containsExactly("Mercury", "Venus", "Earth");
   }
 
+  @Test
+  void testPlanetsNameUpperCase(){
+    List<String> actual = planetUtils.getPlanetsNameUpperCase(planets);
+    assertThat(actual).hasSize(8);
+    assertThat(actual).containsExactly("MERCURY","VENUS","EARTH", "MARS", "JUPITER", "SATURN", "URANUS", "NEPTUNE");
+  }
+
 }
